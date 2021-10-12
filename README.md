@@ -1,1 +1,1 @@
-# DOMAPI-Lab2
+# DOM-API-Lab2
