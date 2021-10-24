@@ -21,9 +21,7 @@
         <body onload="start();">
         <div id="title">
             <h1>Help the bear escape the bees !</h1>
-            <button type = "button"; onclick="start()">Restart Game!</button>
-            <p>Bear tries to avoid being stung by <input type="text" id="nbBees" value="10" size="3"> bees by running and jumping. The objective is to have as less stings as possible!</p>
-                <br>You can add more bees by clicking <button type = "button"; onclick="alert(document.getElementById("nbBees"))">1 more bee</button>
+            <p>Bear tries to avoid being stung by <input type="text" id="nbBees" value="1" size="3"> bees by running and jumping. The objective is to have as less stings as possible!,You can add more bees by clicking <button type = "button"; onclick="this.value = 1+ this.value; createBees(this.value)" >1 more bee</button></p>
             <p>You can ajust bees' speed <input type="text" id="speedBees" value="50" size="3"> px/ms
                 <br> and the refresh period <input type="text" id="periodTimer" value="10" size="3"> ms </p>
             <p>You can ajust bears speed <input type="text" id="bearSpeed" value="100" onchange="bear.setSpeed(this.value)" size="3"> px/ms</p>

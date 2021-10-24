@@ -40,13 +40,6 @@ function Bear() {
 }
 
 function start() {
-    if(bear != undefined){
-        bear = undefined;
-        bees = undefined;
-        lastStingTime = undefined;
-        hits.innerHTML = 0;
-        duration.innerHTML = 0;
-    }
     bear = new Bear();
     document.addEventListener("keydown", moveBear, false);
     bees = new Array();
@@ -153,12 +146,15 @@ function makeBees() {
     //create bees 
     let i = 1;
     while (i <= nbBees) {
-        var num = i;
-        var bee = new Bee(num); //create object and its IMG element
-        bee.display(); //display the bee
-        bees.push(bee); //add the bee object to the bees array
+        createBees(i);
         i++;
     }
+}
+function createBees(n){
+    var num = n;
+    var bee = new Bee(num); //create object and its IMG element
+    bee.display(); //display the bee
+    bees.push(bee); //add the bee object to the bees array
 }
 
 function moveBees() {
