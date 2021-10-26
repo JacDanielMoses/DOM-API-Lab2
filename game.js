@@ -40,6 +40,7 @@ function Bear() {
 }
 
 function start() {
+    gb = false;
     bear = new Bear();
     document.addEventListener("keydown", moveBear, false);
     bees = new Array();
@@ -53,7 +54,12 @@ function moveBear(e) {
     const KEYDOWN = 40;
     const KEYLEFT = 37;
     const KEYRIGHT = 39;
-    if (e.keyCode == KEYDOWN || e.keyCode == KEYUP || e.keyCode == KEYLEFT || e.keyCode == KEYRIGHT){ lastStingTime = new Date(); }
+    if (e.keyCode == KEYDOWN || e.keyCode == KEYUP || e.keyCode == KEYLEFT || e.keyCode == KEYRIGHT){
+        if (gb == false){
+            lastStingTime = new Date(); 
+            gb ==true
+        }
+    }
     if (e.keyCode == KEYRIGHT) { bear.move(1, 0)} // right key
     if (e.keyCode == KEYLEFT) { bear.move(-1, 0)} // left key
     if (e.keyCode == KEYUP) { bear.move(0, -1)} // up key
